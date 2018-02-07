@@ -13,7 +13,9 @@ body {
     font-size: 26px;
 }
 
-.navBar{
+.navbar{
     background-color: white;
-    border-color: cornflowerblue;
+    border-top: 1px solid #FF9F33;
+    border-bottom: 1px solid #FF9F33;
 }
+
