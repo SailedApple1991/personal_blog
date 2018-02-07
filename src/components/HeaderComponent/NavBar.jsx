@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom';
 import React from 'react';
-import {  Collapse,
+import {
+    Collapse,
     Navbar,
     NavbarToggler,
     NavbarBrand,
@@ -11,10 +11,8 @@ import {  Collapse,
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
-import PropTypes from 'prop-types';
-import Link from "react-router-dom/es/Link";
-import '../../css/index.css';
-class NavBar extends React.Component {
+
+export default class Example extends React.Component {
     constructor(props) {
         super(props);
 
@@ -28,12 +26,11 @@ class NavBar extends React.Component {
             isOpen: !this.state.isOpen
         });
     }
-
     render() {
         return (
-            <div className="navBar">
-                <Navbar navbar-light>
-                        <Navbar.Brand href="#brand">Chaojie(Eric) Wang </Navbar.Brand>
+            <div>
+                <Navbar color="faded" light expand="md">
+                    <NavbarBrand href="/">reactstrap</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -67,6 +64,3 @@ class NavBar extends React.Component {
         );
     }
 }
-
-
-export default NavBar;

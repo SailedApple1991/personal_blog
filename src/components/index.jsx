@@ -5,7 +5,7 @@ import HomePage from './HomePage';
 import NaviBar from './HeaderComponent/NavBar';
 import Footer from "./FooterComponent/Footer";
 import '../css/index.css';
-import { FormGroup,FormControl, InputGroup, Button } from 'reactstrap';
+import { FormGroup, InputGroup } from 'reactstrap';
 class App extends Component {
     render() {
         return (
@@ -16,13 +16,11 @@ class App extends Component {
                 <form>
                 <FormGroup>
                     <InputGroup>
-                        <FormControl
+
                             type="text"
                             placeholder="search an artist..."/>
-                        <div className="input-group-append" id="basic-addon2">
-                            <Button>
-                                <i className="fas fa-search"></i>
-                            </Button></div>
+                        <div className="input-group-append" id="basic-addon2"></div>
+
                     </InputGroup>
             </FormGroup>
 
