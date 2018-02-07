@@ -1,48 +1,68 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import { Navbar, Nav, NavItem,NavDropdown, MenuItem } from 'react-bootstrap';
+import {  Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem } from 'reactstrap';
 import PropTypes from 'prop-types';
 import Link from "react-router-dom/es/Link";
 import '../../css/index.css';
 class NavBar extends React.Component {
+    constructor(props) {
+        super(props);
 
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
 
     render() {
         return (
             <div className="navBar">
-                <Navbar inverse collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#brand">React-Bootstrap</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav>
-                            <NavItem eventKey={1} href="#">
-                                Link
+                <Navbar navbar-light>
+                        <Navbar.Brand href="#brand">Chaojie(Eric) Wang </Navbar.Brand>
+                    <NavbarToggler onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                                <NavLink href="/components/">Components</NavLink>
                             </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                Link
+                            <NavItem>
+                                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
                             </NavItem>
-                            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1}>Action</MenuItem>
-                                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                            </NavDropdown>
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav caret>
+                                    Options
+                                </DropdownToggle>
+                                <DropdownMenu >
+                                    <DropdownItem>
+                                        Option 1
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        Option 2
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        Reset
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
                         </Nav>
-                        <Nav pullRight>
-                            <NavItem eventKey={1} href="#">
-                                Link Right
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                Link Right
-                            </NavItem>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>;
+                    </Collapse>
+                </Navbar>
             </div>
         );
     }
