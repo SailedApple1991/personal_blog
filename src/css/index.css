@@ -1,0 +1,19 @@
+body {
+    background: white;
+    color: black;
+}
+
+
+.App {
+    text-align: center;
+    padding: 5px;
+}
+
+.App-title {
+    font-size: 26px;
+}
+
+.navBar{
+    background-color: white;
+    border-color: cornflowerblue;
+}
