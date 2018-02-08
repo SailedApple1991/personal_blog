@@ -3,6 +3,10 @@ body {
     color: black;
 }
 
+div, input, p, pre, textarea {
+    font-family: Droid Sans,sans-serif;
+    line-height: 2em;
+}
 
 .App {
     text-align: center;
@@ -13,24 +17,23 @@ body {
     font-size: 26px;
 }
 
-
+.a{
+    color: black;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-@media (max-width: 768px) {
+@media (max-width: 568px) {
 
     .navbar{
         background-color: white;
-        border-bottom: 2px solid #7386D5;
+        border-bottom: 2px solid darkorange;
         display: flex !important;
     }
     #sidebar {
         display: none;
     }
-    #sidebar.active {
 
-
-    }
     #content {
         width: 100%;
     }
@@ -42,32 +45,33 @@ body {
     }
 }
 #sidebar {
-    width: 28%;
     position: fixed;
     top: 0;
     left: 0;
-    height: 80%;
+    bottom: 0;
     z-index: 30;
-    background: white;
-    color: #fff;
-    transition: width 0.6s ease, left 0.6s ease;
-    border-right: 2px solid #7386D5;
     margin-top: auto;
     margin-bottom: auto;
+    height: 80%;
+    width: 28%;
+    transition: width 0.6s ease, left 0.6s ease;
+    border-right: 2px solid orange;
+    background-color: white;
 }
 
 #sidebar.active {
     margin-left: -250px;
+    font-weight: 700;
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: orange;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid orangered;
 }
 
 #sidebar ul p {
@@ -75,30 +79,34 @@ body {
     padding: 10px;
 }
 
-#sidebar ul li a {
+#sidebar li a {
+    color:black;
+    font-size: 1.5em;
     padding: 10px;
-    font-size: 1.1em;
     display: block;
 }
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
+#sidebar li a:hover {
+    color: orange;
+    background: darkgrey;
+    border-right: 10px solid darkorange;
+
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+    color: darkgrey;
+    background: orange;
 }
 a[data-toggle="collapse"] {
     position: relative;
 }
 
 a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+
     content: '\e259';
     display: block;
     position: absolute;
     right: 20px;
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Droid Sans,sans-serif';
     font-size: 0.6em;
 }
 a[aria-expanded="true"]::before {
@@ -109,7 +117,7 @@ a[aria-expanded="true"]::before {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: orange;
 }
 
 ul.CTAs {
@@ -125,16 +133,17 @@ ul.CTAs a {
 }
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: darkorange;
 }
 a.article, a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
+    background: darkgoldenrod !important;
+    color: darkgrey !important;
 }
 
 div, input, p, pre, textarea {
     font-family: Droid Sans,sans-serif;
     line-height: 2em;
+    color: black;
 }
 
 .navbar{
@@ -151,4 +160,19 @@ div, input, p, pre, textarea {
     height:150px;
     border:3px solid #ffffff;
     border-radius:75px;
+}
+
+.nav-link:hover{
+    background: lightgrey;
+    border-right: 10px solid darkorange;
+    transition: top 0.6s ease;
+    z-index: 1;
+    cursor: pointer;
+
+}
+.nav-link ul li a {
+    color:black;
+    padding: 10px;
+    display: block;
+
 }

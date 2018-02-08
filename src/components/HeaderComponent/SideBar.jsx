@@ -36,7 +36,7 @@ export default class SideBar extends React.Component {
 
     render() {
         return (
-
+        <div>
             <Nav vertical id="sidebar">
                 <NavItem className="profile">
                     <Media object src={MyprofilePic} alt="Profile" className="profile-img" />
@@ -54,7 +54,7 @@ export default class SideBar extends React.Component {
                     <NavLink disabled href="#">Disabled Link</NavLink>
                 </NavItem>
             </Nav>
-
+        </div>
         );
     }
 }
