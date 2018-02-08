@@ -12,7 +12,7 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
 
-export default class Example extends React.Component {
+export default class NavBar extends React.Component {
     constructor(props) {
         super(props);
 
@@ -30,10 +30,10 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="faded" light expand="md">
-                    <NavbarBrand href="/">chaojie(eric) wang</NavbarBrand>
+                    <NavbarBrand href="/">reactstrap</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto float-right" navbar>
+                        <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink href="/components/">Components</NavLink>
                             </NavItem>
@@ -64,3 +64,5 @@ export default class Example extends React.Component {
         );
     }
 }
+
+

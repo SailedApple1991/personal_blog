@@ -6,37 +6,20 @@ import NaviBar from './HeaderComponent/NavBar';
 import Footer from "./FooterComponent/Footer";
 import '../css/index.css';
 import { FormGroup, InputGroup } from 'reactstrap';
+import SideBar from './HeaderComponent/SideBar'
 class App extends Component {
     render() {
         return (
             <div className="App">
+                <SideBar/>
                 <NaviBar/>
                 <div className="App-title">My blog</div>
-                <div className="Search-box">
-                <form>
-                <FormGroup>
-                    <InputGroup>
 
-                            type="text"
-                            placeholder="search an artist..."/>
-                        <div className="input-group-append" id="basic-addon2"></div>
-
-                    </InputGroup>
-            </FormGroup>
-
-                </form>
-                </div>
-                <div className="Profile">
-                    <div>Artist Picture</div>
-                    <div>Artist Name</div>
-                </div>
-                <div className="Gallery">
-                    Gallery
-                </div>
             </div>
 
         )
 
     }
 }
+
 export default App;

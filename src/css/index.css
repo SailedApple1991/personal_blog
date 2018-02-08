@@ -13,9 +13,142 @@ body {
     font-size: 26px;
 }
 
-.navbar{
-    background-color: white;
-    border-top: 1px solid #FF9F33;
-    border-bottom: 1px solid #FF9F33;
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .navbar{
+        background-color: white;
+        border-bottom: 2px solid #7386D5;
+        display: flex !important;
+    }
+    #sidebar {
+        display: none;
+    }
+    #sidebar.active {
+
+
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+#sidebar {
+    width: 28%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80%;
+    z-index: 30;
+    background: white;
+    color: #fff;
+    transition: width 0.6s ease, left 0.6s ease;
+    border-right: 2px solid #7386D5;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+div, input, p, pre, textarea {
+    font-family: Droid Sans,sans-serif;
+    line-height: 2em;
+}
+
+.navbar{
+    display: none;
+
+}
+
+.profile{
+    display:flex;
+    justify-content: center;
+}
+.profile-img{
+    width: 150px;
+    height:150px;
+    border:3px solid #ffffff;
+    border-radius:75px;
+}
