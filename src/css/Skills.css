@@ -1,0 +1,90 @@
+
+.vertical-line-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    border-left: 2px solid lightgray;
+}
+
+.category {
+    width: 320px;
+    padding-left: 50px;
+    padding-top: 30px;
+    margin: 0 auto 30px auto;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    color: #555;
+}
+.tree {
+    margin-left: 17px;
+}
+.tree, .subtree {
+    position: relative;
+}
+
+.skill-line, .sub-line {
+    position: absolute;
+    left: -12px;
+    top: 0;
+    height: 20px;
+    width: 15px;
+    border-left: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+.color-0 .Icon, .color-0 .skill-line:before {
+    background-color: #30a529;
+}
+.color-1 .Icon, .color-1 .skill-line:before {
+    background-color: orange;
+}
+.color-2 .Icon, .color-2 .skill-line:before {
+    background-color: darkred;
+}
+.color-3 .Icon, .color-3 .skill-line:before {
+    background-color: #29a592;
+}
+.color-4 .Icon, .color-4 .skill-line:before {
+    background-color: darkblue;
+}
+.Icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+
+
+
+
+.skill-line:before, .sub-line:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: -7px;
+    top: 15px;
+}
+
+.div {
+    display: block;
+}
+
+.skills-1 {
+    position: relative;
+    font-size: initial;
+    color: initial;
+    margin-left: 12px;
+    padding-left: 12px;
+    line-height: 40px;
+}

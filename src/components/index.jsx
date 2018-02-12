@@ -5,17 +5,31 @@ import HomePage from './HomePage';
 import NaviBar from './HeaderComponent/NavBar';
 import Footer from "./FooterComponent/Footer";
 import '../css/index.css';
-import { FormGroup, InputGroup } from 'reactstrap';
-import SideBar from './HeaderComponent/SideBar'
+import { Container, Row, Col } from 'reactstrap';
+import SideBar from './HeaderComponent/SideBar';
+import Skills from './ContentComponent/Skills';
 class App extends Component {
     render() {
         return (
             <div className="App">
-                <SideBar/>
-                <NaviBar/>
-                <div className="App-title">My blog</div>
+                <Container>
+                <Row>
+                    <Col><NaviBar/></Col>
+                </Row>
 
-            </div>
+                    <Row className="sidebar-content">
+                    <Col xs="3" sm="3"><SideBar/></Col>
+                    <Col xs="12" sm={{ size: '8', offset: -4 }} ><HomePage/></Col>
+                    </Row>
+                    <Row>
+                        <Col xs="3" sm="3"></Col>
+                        <Col xs="12" sm={{ size: '8', offset: -4 }} ><Skills/></Col>
+                    </Row>
+
+                </Container>
+
+                </div>
+
 
         )
 

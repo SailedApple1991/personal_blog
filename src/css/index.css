@@ -8,10 +8,7 @@ div, input, p, pre, textarea {
     line-height: 2em;
 }
 
-.App {
-    text-align: center;
-    padding: 5px;
-}
+
 
 .App-title {
     font-size: 26px;
@@ -45,6 +42,7 @@ div, input, p, pre, textarea {
     }
 }
 #sidebar {
+    float: left;
     position: fixed;
     top: 0;
     left: 0;
@@ -170,9 +168,16 @@ div, input, p, pre, textarea {
     cursor: pointer;
 
 }
+.nav-link.active{
+    border-right: 10px solid orange;
+}
 .nav-link ul li a {
     color:black;
     padding: 10px;
     display: block;
 
+}
+.sidebar-content{
+    margin-top: auto;
+    margin-bottom: auto;
 }
